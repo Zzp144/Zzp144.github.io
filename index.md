@@ -27,6 +27,6 @@ If you are interested in any aspect of me, I am always open to discussions and a
 ## News and Updates
 
 - Wang, X. †, Zhang, Z.† , Han, Z., et al. (2025). A scientometric analysis of artificial intelligence for teacher’s professional development from 2003 to 2024. *Humanities and Social Sciences Communications* (Under Review)
-- Wang, X.*~*, Wang, Y., …Zhang, Z.*~*, et al. (2025). Social robots for child development: Research hotspots, topic modelling, and collaborations *Humanities and Social Sciences Communications* (Under Review)
+- Wang, X.*~*, Wang, Y., …Zhang, Z.*~*, et al. (2025). Social robots for child development: Research hotspots, topic modelling, and collaborations *Humanities and Social Sciences Communications* (In Press)
 - **May 2025**：Present and report a paper at the GCCCE2025 conference, entitled AI for educators’ professional development.
 
