@@ -19,14 +19,14 @@ If you are interested in any aspect of me, I am always open to discussions and a
 ## Research Interests
 
 - AI for Education
-- Teacher Professional Development
-- Mentors/Mentoring
-- In-service Teacher
-- Pre-service Teacher
+- Teachers’ Professional Development
+- Learning Analytics
 
 ---
 
 ## News and Updates
 
-- **May 2025**：Present and report a paper at the GCCCE2025 conference, with the title of the paper being ["人工智能驱动教师专业发展的进展与趋势：基于2003-2024年文献的科学计量分析"](https://zzp144.github.io/file/ywen.pdf))
+- Wang, X. †, Zhang, Z.† , Han, Z., et al. (2025). A scientometric analysis of artificial intelligence for teacher’s professional development from 2003 to 2024. *Humanities and Social Sciences Communications* (Under Review)
+- Wang, X., Wang, Y., …Zhang, Z., et al. (2025). Social robots for child development: Research hotspots, topic modelling, and collaborations *Humanities and Social Sciences Communications* (Under Review)
+- **May 2025**：Present and report a paper at the GCCCE2025 conference, entitled AI for educators’ professional development.
 
