@@ -1,0 +1,217 @@
+$(function(){
+	
+	var lh = $(".n_left").height(),rh = $(".n_rig").height();
+	rh>lh ? $(".n_left").height(rh) : $(".n_left").height(lh);
+	
+	//视觉形象识别系统切换
+	$(".wm_tabs").find("li").each(function(i) {
+		var n = i + 1;
+		$(".wm_tabconts").find(".wm_tabitem:first").show();
+		$(this).click(function(){
+			$(this).addClass("cur").siblings().removeClass("cur");
+			$(".wm_tabconts").find(".wm_tabitem:eq(" + i + ")").show().siblings().hide();
+		});
+		//舞美欣赏图片切换
+		$("#caroEndless" + n + " a").powerSwitch({
+			classDisabled: '',
+			duration:800,
+			container: $("#caroBoxEnd" + n),
+			number: 1
+		});
+	});
+	
+	//导航效果
+	$(".nav").slide({ type:"menu",  titCell:".m", targetCell:".nson_nav",effect:"slideDown", delayTime:500, triggerTime:0,defaultPlay:false,returnDefault:true });	
+	
+
+
+	//轮播图效果
+	try{
+	$('.flexslider').flexslider({
+		animation: "slide",
+		slideshowSpeed:8000
+	});
+	
+	}catch(e){};
+	
+	try{
+	
+	$(".nuiselect").selectui({
+			// 是否自动计算宽度
+			autoWidth: true,
+			// 是否启用定时器刷新文本和宽度
+			interval: true
+	});
+	}catch(e){};
+	
+	
+	$(".focus").slide({mainCell:"#pic ul",effect:"left",autoPlay:true,delayTime:300 });
+
+
+	$(".wx").hover(function(){
+		$(this).find(".img").show();
+	},function(){
+		$(this).find(".img").hide();	
+	});
+	
+	$(".shar").find(".s2").hover(function(){
+		$(this).find(".img").show();
+	},function(){
+		$(this).find(".img").hide();	
+	});
+	
+
+	
+	
+	
+	//IE8、IE7下宽度设置
+	if(navigator.userAgent.indexOf("MSIE")>0)  
+	{ 
+		if(navigator.userAgent.indexOf("MSIE 8.0")>0)  
+		{
+			if ((screen.width >= 1440)) {
+                $('head').append('<link rel="stylesheet" href="/images/ie8.css" type="text/css" />');
+            } else if ((screen.width <= 1280)) {
+                $('head').append('<link rel="stylesheet" href="/images/ie8_2.css" type="text/css" />');
+            } else {
+                $('head').append('<link rel="stylesheet" href="/images/ie8_2.css" type="text/css" />');
+            }
+		} 
+		if(navigator.userAgent.indexOf("MSIE 7.0")>0)  
+		{ 
+			if ((screen.width >= 1440)) {
+                $('head').append('<link rel="stylesheet" href="/images/ie8.css" type="text/css" />');
+            } else if ((screen.width <= 1280)) {
+                $('head').append('<link rel="stylesheet" href="/images/ie8_2.css" type="text/css" />');
+            } else {
+                $('head').append('<link rel="stylesheet" href="/images/ie8_2.css" type="text/css" />');
+            }
+		 
+		}    
+	} 
+	
+	
+});
+
+
+$(function(){
+	//$(".column_button dd").hide();
+	$(".column_button dt").click(function(){
+		$(this).parent().find('dd').removeClass("menu_chioce");
+        $(".column_button dt").css("color","#000");
+        $(this).css("color","#045dc7");
+         $(this).parent().find('dd').removeClass("menu_chioce");
+		$(".menu_chioce").slideUp(); 
+		$(this).parent().find('dd').slideToggle();
+		$(this).parent().find('dd').addClass("menu_chioce");
+	})
+});
+
+
+/**
+*底部浮动广告特效，点击关闭缩放在左边，点击左边展开广告，纯DIV+CSS+JS特效 by www.naz.cn
+**/
+
+function target_dis(){
+    var  target=document.getElementById("xcx-ad");
+    target.style.display="none";
+    }
+function target_disa(){
+    var  target=document.getElementById("xcx-ad");
+    target.style.display="block";
+	}
+
+
+
+
+
+
+
+/* 导航条 */
+$(function () {
+
+   $('.sidenav').find('label').click(function(){
+      $('.sidenav').children('.side').slideToggle();
+   })
+
+   //PC端鼠标浮动展示子导航
+   $(".nav>ul>li").each(function () {
+
+      //设置每个li的长度
+      var $length = $('.nav ul li').length
+      var $li =$('.nav ul').children('li');
+      var $lilgh = 120 / $length ;
+      $li.outerWidth($lilgh + '%')
+
+      //如果没有子目录，则删除包含子目录的div
+      if ($(this).children('.s_navbox').children('.s_a').find('a').length<1) {
+         $(this).children('.s_navbox').remove()
+      }
+
+      //设置伸缩和展开的样式
+      else{
+         $(this).mouseover(
+            function (){
+               $(this).children('').next('.s_navbox').stop(true, true).delay(100).slideDown(200);
+            })
+         $(this).mouseleave(
+            function (){$(this).children('').next('.s_navbox').stop(true, true).delay(100).slideUp(100);})
+      }
+   });
+
+   //点击逐渐展开移动端导航
+   $(".a_js").click(
+       function () {
+           $(".m_nav").stop(true, false).delay(0).animate({
+               width: "100%",
+               height: "100%"
+           }, 0);
+           $(".m_nav").find(".closecover").stop(true, false).delay(0).animate({
+               opacity: "0.9"
+           }, 300);
+           $(".m_nav").find(".closeicon").stop(true, false).delay(0).animate({
+               opacity: "1"
+           }, 300);
+           $(".m_nav").find(".m_navList").stop(true, false).delay(0).animate({
+               right: "0"
+           }, 300);
+           $('body').css('overflow','hidden');
+       }
+   )
+
+   //点击关闭，逐渐隐藏
+   $(".a_closed").click(
+       function () {
+           $(".m_nav").stop(true, false).delay(300).animate({
+               width: "0",
+               height: "0"
+           }, 0);
+           $(".m_nav").find(".closecover").stop(true, false).delay(0).animate({
+               opacity: "0"
+           }, 300);
+           $(".m_nav").find(".closeicon").stop(true, false).delay(0).animate({
+               opacity: "0"
+           }, 300);
+           $(".m_nav").find(".m_navList").stop(true, false).delay(0).animate({
+               right: "-80%"
+           }, 300);
+           $('body').css('overflow','auto');
+       }
+   )
+
+   //判断是否有子标题
+   $('.m_navList ul li').each(function () {
+      $(this).children('.m_f_a').find('i').addClass('icon')
+      if ($(this).children('.m_s_nav').find('a').length < 1) {
+         $(this).children('.m_f_a').children('i').removeClass('icon');
+      }
+   });
+
+   //点击图标展开关闭子导航
+   $('.m_navList ul li').find('.m_f_a i').click(function () {
+      $(this).parent().parent().siblings().children('.m_s_nav').slideUp();
+      $(this).parent().parent().siblings().children('.m_f_a').find('i').removeClass('icon_on')
+      $(this).parent().next().toggle("normal").prev().children('i').toggleClass('icon_on');
+   })
+
+});
